@@ -13,6 +13,7 @@ let operators = document.querySelectorAll(".buttons #operator");
 let display = document.getElementById("input");
 let clear = document.getElementById("clear");
 let equal = document.getElementById("orange");
+let clearLast = document.getElementById("clearLast");
 
 let resultDisplayed = false;
 
@@ -114,4 +115,9 @@ equal.addEventListener("click", () => {
 // Clear button  make html element equal "" nothing
 clear.addEventListener("click", () => {
     display.innerHTML = "";
+});
+
+clearLast.addEventListener("click", () => {
+    console.log((display.innerHTML).length);
+    display.innerHTML = (display.innerHTML).substring(0, (display.innerHTML).length - 1);
 });
